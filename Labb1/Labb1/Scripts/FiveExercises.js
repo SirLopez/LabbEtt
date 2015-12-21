@@ -78,3 +78,33 @@ function convertTimeToSeconds() {
         return document.getElementById("task3answerSeconds").innerHTML = inputHours * 3600;
     }
 }
+
+//Task 4
+
+
+
+var average = document.getElementById("task4answerAverage");
+average.addEventListener('click', calculateAverage, false);
+
+var sum = document.getElementById("task4answerSum");
+sum.addEventListener('click', calculateSum, false);
+
+function calculateAverage() {
+
+    var noOne = document.getElementById("task4inputOne").value;
+    var noTwo = document.getElementById("task4inputTwo").value;
+    var noThree = document.getElementById("task4inputThree").value;
+
+    return document.getElementById("task4answerAverage").innerHTML = (Number(noOne) + Number(noTwo) + Number(noThree)) / 3;
+
+}
+
+function calculateSum() {
+
+    var noOne = document.getElementById("task4inputOne").value;
+    var noTwo = document.getElementById("task4inputTwo").value;
+    var noThree = document.getElementById("task4inputThree").value;
+
+    return document.getElementById("task4answerSum").innerHTML = Number(noOne) + Number(noTwo) + Number(noThree);
+
+}
