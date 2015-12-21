@@ -48,3 +48,33 @@ function displaySalary() {
     var commision = com - 15000;
     document.getElementById("task2answer").innerHTML = Math.round(com * 100) / 100 + " SEK, where the commision is " + Math.round(commision * 100) / 100 + " SEK (9%).";
 }
+
+//Task 3
+
+var time;
+
+var minutes = document.getElementById("task3answerMinutes");
+minutes.addEventListener('click', convertTimeToMinutes, false);
+
+var seconds = document.getElementById("task3answerSeconds");
+seconds.addEventListener('click', convertTimeToSeconds, false);
+
+function convertTimeToMinutes() {
+    var inputHours = document.getElementById("task3input").value;
+
+    if (isNaN(inputHours)) {
+        return "Sorry, digits only!";
+    } else {
+        return document.getElementById("task3answerMinutes").innerHTML = inputHours * 60;
+    }
+}
+
+function convertTimeToSeconds() {
+    var inputHours = document.getElementById("task3input").value;
+
+    if (isNaN(inputHours)) {
+        return "Sorry, digits only!";
+    } else {
+        return document.getElementById("task3answerSeconds").innerHTML = inputHours * 3600;
+    }
+}
