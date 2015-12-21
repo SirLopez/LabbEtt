@@ -82,7 +82,6 @@ function convertTimeToSeconds() {
 //Task 4
 
 
-
 var average = document.getElementById("task4answerAverage");
 average.addEventListener('click', calculateAverage, false);
 
@@ -107,4 +106,32 @@ function calculateSum() {
 
     return document.getElementById("task4answerSum").innerHTML = Number(noOne) + Number(noTwo) + Number(noThree);
 
+}
+
+//Task 5
+
+var dollar = document.getElementById("task5answerUSD");
+dollar.addEventListener('click', changeToUSD, false);
+
+var pound = document.getElementById("task5answerPound");
+pound.addEventListener('click', changeToPound, false);
+
+function changeToUSD() {
+    var sek = document.getElementById("task5input").value;
+
+    if (isNaN(sek)) {
+        return "You can´t change that, insert a number instead!";
+    } else {
+        return document.getElementById("task5answerUSD").innerHTML = sek * 6;
+    }
+}
+
+function changeToPound() {
+    var sek = document.getElementById("task5input").value;
+
+    if (isNaN(sek)) {
+        return "You can´t change that, insert a number instead!";
+    } else {
+        return document.getElementById("task5answerPound").innerHTML = sek * 12;
+    }
 }
